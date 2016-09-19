@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Bootstrap-birthday</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <style type="text/css">
+    body {
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand navbar-brand" href="https://github.com/lonalore/bootstrap-birthday">
+        bootstrap-birthday
+      </a>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">Demo</a>
+        </li>
+        <li>
+          <a href="https://github.com/lonalore/bootstrap-birthday" target="_blank">GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>"input-group" template (default)</h3>
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <div class="col-lg-12">
+        <input type="text" name="birthday" value="" id="input-group"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-12">
+        <pre>
+$('#element').bootstrapBirthday({
+  widget: {
+    wrapper: {
+      tag: 'div',
+      class: 'input-group'
+    },
+    wrapperYear: {
+      use: true,
+      tag: 'span',
+      class: 'input-group-addon'
+    },
+    wrapperMonth: {
+      use: true,
+      tag: 'span',
+      class: 'input-group-addon'
+    },
+    wrapperDay: {
+      use: true,
+      tag: 'span',
+      class: 'input-group-addon'
+    },
+    selectYear: {
+      name: 'birthday[year]',
+      class: 'form-control input-sm'
+    },
+    selectMonth: {
+      name: 'birthday[month]',
+      class: 'form-control input-sm'
+    },
+    selectDay: {
+      name: 'birthday[day]',
+      class: 'form-control input-sm'
+    }
+  }
+});
+        </pre>
+      </div>
+    </div>
+  </form>
+
+  <h3>"row" and "col-xx" template</h3>
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <div class="col-lg-12">
+        <input type="text" name="birthday" value="" id="row-col"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-12">
+        <pre>
+$('#element').bootstrapBirthday({
+  widget: {
+    wrapper: {
+      tag: 'div',
+      class: 'row'
+    },
+    wrapperYear: {
+      use: true,
+      tag: 'div',
+      class: 'col-sm-4'
+    },
+    wrapperMonth: {
+      use: true,
+      tag: 'div',
+      class: 'col-sm-4'
+    },
+    wrapperDay: {
+      use: true,
+      tag: 'div',
+      class: 'col-sm-4'
+    },
+    selectYear: {
+      name: 'birthday[year]',
+      class: 'form-control'
+    },
+    selectMonth: {
+      name: 'birthday[month]',
+      class: 'form-control'
+    },
+    selectDay: {
+      name: 'birthday[day]',
+      class: 'form-control'
+    }
+  }
+});
+        </pre>
+      </div>
+    </div>
+  </form>
+
+  <h3>Disabled wrappers</h3>
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <div class="col-lg-12">
+        <input type="text" name="birthday" value="" id="simple"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-12">
+        <pre>
+$('#element').bootstrapBirthday({
+  widget: {
+    wrapper: {
+      tag: 'div',
+      class: ''
+    },
+    wrapperYear: {
+      use: false
+    },
+    wrapperMonth: {
+      use: false
+    },
+    wrapperDay: {
+      use: false
+    },
+    selectYear: {
+      name: 'birthday[year]',
+      class: 'form-control'
+    },
+    selectMonth: {
+      name: 'birthday[month]',
+      class: 'form-control'
+    },
+    selectDay: {
+      name: 'birthday[day]',
+      class: 'form-control'
+    }
+  }
+});
+        </pre>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap-birthday/dist/bootstrap-birthday.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#input-group').bootstrapBirthday({
+      widget: {
+        wrapper: {
+          tag: 'div',
+          class: 'input-group'
+        },
+        wrapperYear: {
+          use: true,
+          tag: 'span',
+          class: 'input-group-addon'
+        },
+        wrapperMonth: {
+          use: true,
+          tag: 'span',
+          class: 'input-group-addon'
+        },
+        wrapperDay: {
+          use: true,
+          tag: 'span',
+          class: 'input-group-addon'
+        },
+        selectYear: {
+          name: 'birthday[year]',
+          class: 'form-control input-sm'
+        },
+        selectMonth: {
+          name: 'birthday[month]',
+          class: 'form-control input-sm'
+        },
+        selectDay: {
+          name: 'birthday[day]',
+          class: 'form-control input-sm'
+        }
+      }
+    });
+
+    $('#row-col').bootstrapBirthday({
+      widget: {
+        wrapper: {
+          tag: 'div',
+          class: 'row'
+        },
+        wrapperYear: {
+          use: true,
+          tag: 'div',
+          class: 'col-sm-4'
+        },
+        wrapperMonth: {
+          use: true,
+          tag: 'div',
+          class: 'col-sm-4'
+        },
+        wrapperDay: {
+          use: true,
+          tag: 'div',
+          class: 'col-sm-4'
+        },
+        selectYear: {
+          name: 'birthday[year]',
+          class: 'form-control'
+        },
+        selectMonth: {
+          name: 'birthday[month]',
+          class: 'form-control'
+        },
+        selectDay: {
+          name: 'birthday[day]',
+          class: 'form-control'
+        }
+      }
+    });
+
+    $('#simple').bootstrapBirthday({
+      widget: {
+        wrapper: {
+          tag: 'div',
+          class: ''
+        },
+        wrapperYear: {
+          use: false
+        },
+        wrapperMonth: {
+          use: false
+        },
+        wrapperDay: {
+          use: false
+        },
+        selectYear: {
+          name: 'birthday[year]',
+          class: 'form-control'
+        },
+        selectMonth: {
+          name: 'birthday[month]',
+          class: 'form-control'
+        },
+        selectDay: {
+          name: 'birthday[day]',
+          class: 'form-control'
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
